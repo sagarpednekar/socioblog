@@ -1,0 +1,172 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+a {
+    color: #f0f5f9;
+}
+
+.top-bar-title {
+    color: #fff;
+}
+
+.topbar-sticky-shrink {
+    padding: 2rem;
+    transition: padding 0.25s ease;
+    background: #2c3840;
+}
+
+.topbar-sticky-shrink .menu {
+    background: #2c3840;
+}
+
+.is-stuck .topbar-sticky-shrink {
+    padding: 1rem;
+    transition: padding 0.25s ease;
+}
+
+[data-sticky] {
+    width: 100%;
+}
+
+.topbar-sticky-shrink-header {
+    padding: 10rem 0;
+    background: aquamarine;
+    background-size: contain;
+    color: #fff;
+}
+
+.ecommerce-footer {
+    background-color: #fefefe;
+    padding: 70px 20px 40px 20px;
+}
+
+.ecommerce-footer-links h5 {
+    color: #0a0a0a;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.ecommerce-footer-links .menu>li>a {
+    line-height: 1.5em;
+    padding: 0.5rem 0rem;
+}
+
+.ecommerce-footer-links a {
+    color: #707070;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+}
+
+.ecommerce-footer-links a:hover {
+    color: #0a0a0a;
+    transition: all 0.5s ease;
+}
+
+.ecommerce-footer-links .more-categories {
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .ecommerce-footer-links .more-categories {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 63.9375em) {
+    .ecommerce-footer-links .ecommerce-footer-links-block {
+        margin-bottom: 3rem;
+    }
+}
+
+.ecommerce-footer-bottom-bar {
+    border-top: 1px solid #e6e6e6;
+    margin-top: 40px;
+    padding-bottom: 80px;
+    padding-top: 30px;
+}
+
+.ecommerce-footer-bottom-bar .menu>li>a {
+    line-height: 1.2em;
+    padding: 10px 0;
+}
+
+.ecommerce-footer-bottom-bar a {
+    color: #8a8a8a;
+    font-size: 0.9rem;
+    transition: all 0.5s ease;
+}
+
+.ecommerce-footer-bottom-bar a:hover {
+    color: #0a0a0a;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .ecommerce-footer-bottom-bar ul {
+        text-align: center;
+    }
+}
+
+.ecommerce-footer-bottom-bar li {
+    display: inline;
+}
+
+.ecommerce-footer-bottom-bar .bottom-links {
+    margin-top: 0.65rem;
+    margin-left: 0;
+}
+
+.ecommerce-footer-bottom-bar .bottom-links li {
+    padding-right: 2rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .ecommerce-footer-bottom-bar .bottom-links li {
+        text-align: center;
+    }
+}
+
+.ecommerce-footer-bottom-bar .ecommerce-footer-logomark {
+    text-align: center;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .ecommerce-footer-bottom-bar .ecommerce-footer-logomark {
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.ecommerce-footer-bottom-bar .bottom-copyright {
+    color: #8a8a8a;
+    font-size: 0.9rem;
+    line-height: 1.2em;
+    padding-top: 1rem;
+    text-align: right;
+}
+
+@media screen and (max-width: 39.9375em) {
+    .ecommerce-footer-bottom-bar .bottom-copyright {
+        text-align: center;
+    }
+}
+
+.ecommerce-footer {
+    background-color: #2b2828;
+    margin-top: 6em;
+}
