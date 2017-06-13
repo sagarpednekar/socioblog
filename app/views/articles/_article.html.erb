@@ -3,7 +3,7 @@
    <div class="col-xs-8 col-xs-offset-2">
      <h4><%= link_to  article.title, article_path(article) %></h4>
     <blockquote class="bs-callout-danger">
-      <p><%= truncate(article.description,length: 700) %> Created By: <small><%= article.user.username if article.user %> , <%= time_ago_in_words(article.created_at) %> ago , last updated at <%= time_ago_in_words(article.updated_at,include_seconds: true)%> </small></p>
+      <p><%=  truncate((raw article.description),length: 700) %> Created By: <small><%= article.user.username if article.user %> , <%= time_ago_in_words(article.created_at) %> ago , last updated at <%= time_ago_in_words(article.updated_at,include_seconds: true)%> </small></p>
 
     </blockquote>
     <% if loged_in? && (current_user == article.user || current_user.admin?) %>

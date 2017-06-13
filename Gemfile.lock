@@ -47,6 +47,12 @@ GEM
     bindex (0.5.0)
     builder (3.2.3)
     byebug (9.0.6)
+    ckeditor (4.2.3)
+      cocaine
+      orm_adapter (~> 0.5.0)
+    climate_control (0.2.0)
+    cocaine (0.5.8)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -89,6 +95,7 @@ GEM
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
+    orm_adapter (0.5.0)
     pg (0.20.0)
     puma (3.9.1)
     rack (2.0.3)
@@ -176,6 +183,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   byebug
+  ckeditor
   coffee-rails (~> 4.2)
   foundation-rails
   jbuilder (~> 2.5)

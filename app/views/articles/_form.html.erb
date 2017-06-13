@@ -8,7 +8,7 @@
             <%= f.label :title %>
          </div>
          <div class="col-xs-10">
-            <%= f.text_field :title, class: "form-control",placeholder: "Title for Article",autofocus: true %>
+            <%= f.text_field :title, class: "form-control"%>
          </div>
      <div>
     
@@ -18,7 +18,7 @@
           <%= f.label :description%>
            </div>
            <div class="col-xs-10">
-              <%= f.text_area :description, rows:8 ,class: "form-control",placeholder: "Body for Article",autofocus: true %>
+              <%= f.cktext_area :description, rows:8 ,class: "form-control" %>
            </div>
        </div>
           <div class="form-group">

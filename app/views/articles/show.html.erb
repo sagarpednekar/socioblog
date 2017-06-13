@@ -3,7 +3,7 @@
 	<h4 class="text-center">Showing selected article</h4>
 	<div class="well well-lg col-xs-offset-3 col-xs-6">
 	<h4><strong><%= @article.title %></strong></h4>
-	<p><%= @article.description %></p>
+	<p><%= raw @article.description %></p>
 	<%=link_to "View all articles" ,articles_path ,class:"btn btn-xs btn-success"%>
 	<% if loged_in? && (current_user == @article.user || current_user.admin?) %>
 	<%= link_to "Edit this artcle",edit_article_path(@article), class:"btn btn-xs btn-primary" %>
