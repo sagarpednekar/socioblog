@@ -7,8 +7,8 @@
       </h4>
       <p class="article-author"><em>by <%= article.user.username if article.user %> , <%= time_ago_in_words(article.created_at) %> ago , last updated at <%= time_ago_in_words(article.updated_at,include_seconds: true)%>  </em></p>
       <p class="article-elipsis">
-      <%=  truncate((raw article.description),length: 700) %>    
-          <a href="#" class="read-more">Read more</a></p>
+      <%=  truncate((raw article.description),length: 700) %><br>    
+        <%=link_to "....Read More", article_path(article),class: "read-more button" %></p>
       <div class="article-social">
         <% if loged_in? && (current_user == article.user || current_user.admin?) %>
         <%= link_to "Edit this artcle",edit_article_path(article), class:"button social" %>
