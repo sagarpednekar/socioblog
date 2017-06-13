@@ -1,25 +1,47 @@
-
-<h1 class="text-center"> NewsMap Blog Users</h1>
 <% @users.each do |user|%>
-	<ul>
-		<div class="row">
-			<div class="col-md-offset-4 col-md-3">
-				<div class="well text-center">
-					<li><%= link_to gravatar_for(user), user_path(user)%></li>	
-					<li><%= link_to user.username, user_path(user)%>
-					</li>
-					<li><small></small><span class="badge"><%= pluralize(user.articles.count , "article") if user.articles %></span></li>
-					<% if loged_in? and current_user.admin? %>
-					<li>
-					<%= link_to "Delete this user", user_path(user) ,method: :delete, data: {confirm: "Do you Want to Delete this user?"} %>
-						
-					</li>
-					<% end %>
-				</div>		
-			</div>
-		</div>
-	</ul>	
+<div class="about-the-author">
+  <h3 class="author-title">About the Author</h3>
+  <div class="row">
+    <div class="small-12 medium-4 columns">
+      <div class="author-image">
+      	<%#= link_to gravatar_for(user), user_path(user)%>
+      </div>
+      <div class="author-social">
+        <a href="#">
+          <span class="fa-stack fa-lg facebook">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="#">
+          <span class="fa-stack fa-lg twitter">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a href="#">
+          <span class="fa-stack fa-lg linkedin">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="small-12 medium-8 columns">
+      <h4 class="separator-left"><%= link_to user.username, user_path(user)%></h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eum, iusto vel repudiandae, quaerat soluta sequi officia. Blanditiis atque, illo eaque sint in architecto illum nostrum repudiandae labore tenetur! Eaque impedit pariatur odio ad ipsum qui aspernatur dolorem consequuntur a molestias nisi, quae voluptatem expedita, inventore voluptatibus dolores, veritatis corporis facilis laudantium explicabo vero! Non hic quia facilis blanditiis eum.</p>    
+    <span class="badge"><%= pluralize(user.articles.count , "article") if user.articles %></span></li>
+	  <% if loged_in? and current_user.admin? %>
+			<li<%= link_to "Delete this user", user_path(user) ,method: :delete, data: {confirm: "Do you Want to Delete this user?"} %></li>
+	 <% end %>
+	
+    </div>
+     
+  </div>
+</div>
+<hr>
 <% end -%>
-	<div class="text-center">
-		<%= will_paginate @user%>
-	</div>	
+
+<div class="text-center">
+	<%#= will_paginate @user%>
+</div>

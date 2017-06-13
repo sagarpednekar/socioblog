@@ -13,12 +13,8 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
-
+ *= require font-awesome
  */
-
-a {
-    color: #f0f5f9;
-}
 
 .top-bar-title {
     color: #fff;
