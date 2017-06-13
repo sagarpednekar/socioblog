@@ -1,15 +1,37 @@
 <% obj.each do |article| %>
-<div class="row">
-   <div class="col-xs-8 col-xs-offset-2">
-     <h4><%= link_to  article.title, article_path(article) %></h4>
-    <blockquote class="bs-callout-danger">
-      <p><%=  truncate((raw article.description),length: 700) %> Created By: <small><%= article.user.username if article.user %> , <%= time_ago_in_words(article.created_at) %> ago , last updated at <%= time_ago_in_words(article.updated_at,include_seconds: true)%> </small></p>
-
-    </blockquote>
-    <% if loged_in? && (current_user == article.user || current_user.admin?) %>
-    <%= link_to "Edit this artcle",edit_article_path(article), class:"btn btn-xs btn-primary" %>
-    <%= link_to "Delete this artcle",article_path(article), method: :delete,data: { confirm: "Are you shure you want to delete?" },class: "btn btn-xs btn-danger" %>
-    <% end %>
+<div class="wide-article-link">
+  <div class="row">
+    <div class="small-12 medium-9 columns">
+      <h4 class="article-title">
+        <%= link_to  article.title, article_path(article) %>
+      </h4>
+      <p class="article-author"><em>by <%= article.user.username if article.user %> , <%= time_ago_in_words(article.created_at) %> ago , last updated at <%= time_ago_in_words(article.updated_at,include_seconds: true)%>  </em></p>
+      <p class="article-elipsis">
+      <%=  truncate((raw article.description),length: 700) %>    
+          <a href="#" class="read-more">Read more</a></p>
+      <div class="article-social">
+        <% if loged_in? && (current_user == article.user || current_user.admin?) %>
+        <%= link_to "Edit this artcle",edit_article_path(article), class:"button social" %>
+        <%= link_to "Delete this artcle",article_path(article), method: :delete,data: { confirm: "Are you shure you want to delete?" },class: "button social" %>
+        <% end %>
+        <a href="#" class="button social comments">
+          <i class="fa fa-comments-o" aria-hidden="true"></i> 0
+        </a>
+        <a href="#" class="button social facebook">
+          <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="button social twitter">
+          <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="button social linkedin">
+          <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="button social google-plus">
+          <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
+<hr>
 <% end %>

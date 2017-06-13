@@ -10,6 +10,8 @@
 </div>
 
 <%= render 'articles/article',obj: @user_articles %>
-<div class="text=center col-md-offset-4">
-	<%= will_paginate @user_articles %>
+<div class="text-center">
+<%= will_paginate @user_articles,renderer: FoundationPagination::Rails%>	
 </div>
+
+

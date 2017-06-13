@@ -4,6 +4,7 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+gem 'will_paginate-foundation'
 gem "font-awesome-rails"
 gem 'ckeditor'
 gem 'foundation-rails'

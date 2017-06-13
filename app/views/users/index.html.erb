@@ -41,7 +41,7 @@
 </div>
 <hr>
 <% end -%>
-
 <div class="text-center">
-	<%#= will_paginate @user%>
+<%= will_paginate @user,renderer: FoundationPagination::Rails%>	
 </div>
+
