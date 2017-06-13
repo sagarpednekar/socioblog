@@ -1,6 +1,7 @@
-
-<h1 class="text-center">Listing Article</h1>
-<%= render 'article',obj: @article %>
-<div class="text-center">
-	<%= will_paginate @article %>
+<div class="column row" id="content">
+    <h1 class="text-center">Listing Article</h1>
+    <%= render 'article',obj: @article %>
+    <div class="text-center">
+    	<%= will_paginate @article %>
+    </div>
 </div>
