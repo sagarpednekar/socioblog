@@ -19,7 +19,6 @@
 
 /*================
     CSS for Article
-
 ==================*/
 
 .wide-article-link {
@@ -153,7 +152,7 @@
 }
 
 .ecommerce-footer {
-    background-color: #fefefe;
+    background-color: #2c3840;
     padding: 70px 20px 40px 20px;
 }
 
@@ -271,4 +270,170 @@
 .ecommerce-footer {
     background-color: #2b2828;
     margin-top: 6em;
+}
+
+
+/*===================
+    ARTICLE CSS
+========================*/
+
+@charset "UTF-8";
+.neat-article-container {
+    margin-top: 1.5rem;
+}
+
+.neat-article-container .neat-article-header {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.neat-article-container .neat-article-header .article-header-avatar {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.neat-article-container .neat-article-header .article-header-avatar .header-avatar {
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 50%;
+}
+
+.neat-article-container .neat-article-header .article-header-author {
+    -webkit-flex: 1 0 0;
+    -ms-flex: 1 0 0px;
+    flex: 1 0 0;
+}
+
+.neat-article-container .neat-article-header .article-header-author .author-name {
+    color: #0a0a0a;
+    margin-bottom: 0;
+}
+
+.neat-article-container .neat-article-header .article-header-author .author-description,
+.neat-article-container .neat-article-header .article-header-author .article-date-read {
+    color: #8a8a8a;
+    margin-bottom: 0;
+    font-size: 0.85em;
+}
+
+.neat-article-container .neat-article-title {
+    margin-top: 1rem;
+}
+
+.neat-article-container .neat-article-title .article-title {
+    color: #0a0a0a;
+    font-weight: 600;
+}
+
+.neat-article-container .neat-article-image {
+    margin-top: 1.5rem;
+}
+
+.neat-article-container .neat-article-image .article-image {
+    width: 100%;
+    height: 100vh;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .neat-article-container .neat-article-image .article-image {
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width: 39.9375em) {
+    .neat-article-container .neat-article-image .article-image {
+        height: 45vh;
+    }
+}
+
+.neat-article-container .neat-article-content {
+    margin-top: 2rem;
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons {
+    text-align: center;
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 0.125rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    font-size: 1.5625rem;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 1.6875rem;
+    transition: all 0.5s ease;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button:hover,
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button:focus {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.facebook {
+    background: #3b5998;
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.facebook:before {
+    font-family: "FontAwesome";
+    content: "";
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.facebook:hover,
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.facebook:focus {
+    color: #3b5998;
+    background: #fefefe;
+    border-color: #3b5998;
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.twitter {
+    background: #55acee;
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.twitter:before {
+    font-family: "FontAwesome";
+    content: "";
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.twitter:hover,
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.twitter:focus {
+    color: #55acee;
+    background: #fefefe;
+    border-color: #55acee;
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.google-plus {
+    background: #dd4b39;
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.google-plus:before {
+    font-family: "FontAwesome";
+    content: "";
+}
+
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.google-plus:hover,
+.neat-article-container .neat-article-content .article-social .rounded-social-buttons .social-button.google-plus:focus {
+    color: #dd4b39;
+    background: #fefefe;
+    border-color: #dd4b39;
+}
+
+.neat-article-container .neat-article-content .article-content {
+    color: #0a0a0a;
 }

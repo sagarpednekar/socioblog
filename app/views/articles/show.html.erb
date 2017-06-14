@@ -1,13 +1,55 @@
+<div class="neat-article-container">
+  <div class="row large-8 columns align-center">
+    <div class="neat-article-header">
+      <div class="article-header-avatar">
+        <img class="header-avatar" src="https://i.imgur.com/3AeQRbR.jpg">
+      </div>
+      <div class="article-header-author">
+        <p class="author-name">
+          Harry Manchanda
+        </p>
+        <p class="author-description">
+          Front End Developer crawling his way to Full Stack Development. Team Member @ZURB/Yetinauts!
+        </p>
+        <p class="article-date-read">27 April, 2017 - 5 min read</p>
+      </div>
+    </div>
+    <div class="neat-article-title">
+      <h3 class="article-title"><strong><%= @article.title %></strong></h3>
+    </div>
+  </div>
+  <div class="neat-article-image">
+    <img class="article-image" src="https://i.imgur.com/0buQ75a.jpg" alt="Space">
+  </div>
+  <div class="row neat-article-content">
+    <div class="small-2 large-2 columns" data-sticky-container>
+      <div class="sticky article-social" data-sticky data-anchor="sticky1" data-sticky-on="small">
+        <div class="rounded-social-buttons">
+          <a class="social-button facebook" href="#"></a>
+          <a class="social-button twitter" href="#"></a>
+          <a class="social-button google-plus" href="#"></a>
+        </div>
+      </div>
+    </div>
+    <div class="small-10 large-8 columns" id="sticky1">
+      <div class="article-content">
+        <p><%= raw @article.description %></p>
+         </div>
+    </div>
+  </div>
+</div>
+<!--
 <div class="column row" id="content">
 <div class="container">
 	<h4 class="text-center">Showing selected article</h4>
 	<div class="well well-lg col-xs-offset-3 col-xs-6">
-	<h4><strong><%= @article.title %></strong></h4>
-	<p><%= raw @article.description %></p>
-	<%=link_to "View all articles" ,articles_path ,class:"btn btn-xs btn-success"%>
-	<% if loged_in? && (current_user == @article.user || current_user.admin?) %>
-	<%= link_to "Edit this artcle",edit_article_path(@article), class:"btn btn-xs btn-primary" %>
-	<%= link_to "Delete this artcle",article_path(@article), method: :delete,data: { confirm: "Are you shure you want to delete?" },class: "btn btn-xs btn-danger" %>
-	<% end %>
+	<h4><strong><%#= @article.title %></strong></h4>
+	<p><%#= raw @article.description %></p>
+	<%#=link_to "View all articles" ,articles_path ,class:"btn btn-xs btn-success"%>
+	<%# if loged_in? && (current_user == @article.user || current_user.admin?) %>
+	<%#= link_to "Edit this artcle",edit_article_path(@article), class:"btn btn-xs btn-primary" %>
+	<%#= link_to "Delete this artcle",article_path(@article), method: :delete,data: { confirm: "Are you shure you want to delete?" },class: "btn btn-xs btn-danger" %>
+	<%# end %>
 </div>
 </div>
+-->

@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
- # before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :require_user, except: [:index, :show]
   before_action :require_same_user, only: [:edit,:update,:destroy]
   def index
@@ -11,6 +11,8 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+      
+
   end
 
   def create
@@ -33,7 +35,7 @@ class ArticlesController < ApplicationController
     end
 
     def show
-      @article = Article.find(params[:id])
+      
     end
 
     def destroy
@@ -46,7 +48,7 @@ class ArticlesController < ApplicationController
   end
 
   private
-  def set_params
+  def set_article
      @article = Article.find(params[:id])
   end
 
