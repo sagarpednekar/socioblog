@@ -21,6 +21,10 @@
     CSS for Article
 ==================*/
 
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
 .wide-article-link {
     background-color: #fefefe;
     padding: 1rem 1rem 0.5rem;
