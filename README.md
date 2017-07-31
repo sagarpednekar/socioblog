@@ -1,24 +1,22 @@
-# README
+#TechBlog/SocioBlog
+This demo app will fulfill your basic requirment of creating post.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Here are some steps to install:
 
-Things you may want to cover:
+* Ruby version 2.3.0
 
-* Ruby version
-
-* System dependencies
+* System dependencies Rails -v :- 5.0.1
 
 * Configuration
 
-* Database creation
+  * clone repo
+  * <b> run bundle install </b>
+
+* Database creation 
+  <b> run rails db:create</b>
 
 * Database initialization
+  <b> run rails db:migrate</b>
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Deployment instructions Note: 
+  * <b> run bundle install --without production </b> for heroku </b>
