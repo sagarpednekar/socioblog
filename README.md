@@ -1,6 +1,5 @@
-#TechBlog/SocioBlog
+# TechBlog/SocioBlog
 This demo app will fulfill your basic requirment of creating post.
-
 Here are some steps to install:
 
 * Ruby version 2.3.0
